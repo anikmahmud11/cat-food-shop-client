@@ -10,7 +10,9 @@ const Products = () => {
     },[]);
     return (
         <div>
-            <img src="https://i.ibb.co/CwhKKCv/Cat-Food-Desktop.jpg" alt="" />
+           <div >
+           <img className='w-100' src="https://i.ibb.co/CwhKKCv/Cat-Food-Desktop.jpg" alt="" />
+           </div>
            <h1 className='pt-5'>Our Products</h1>
            <h4 style={{textAlign:"start",padding:"10px"}}>Dry Food</h4>
            <div className=' row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4 m-0 container-fluid'>
@@ -24,6 +26,7 @@ const Products = () => {
                        <p style={{textAlign:"start"}}>{product?.description.slice(0,50)}...</p>
                        <p style={{textAlign:"start"}}>{product?.rating}</p>
                        <p style={{textAlign:"start"}}>${product?.price}</p>
+                       <button>Buy Now</button>
                    </div>)
                }
            </div>
@@ -39,6 +42,7 @@ const Products = () => {
                        <p style={{textAlign:"start"}}>{product?.description.slice(0,50)}...</p>
                        <p style={{textAlign:"start"}}>{product?.rating}</p>
                        <p style={{textAlign:"start"}}>${product?.price}</p>
+                       <button>Buy Now</button>
                    </div>)
                }
            </div>
