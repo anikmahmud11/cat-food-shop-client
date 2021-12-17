@@ -1,0 +1,11 @@
+.shipping{
+    display:flex;
+}
+
+
+@media only screen and(width:"660px"){
+    .shipping{
+        display:block;
+    }
+
+}

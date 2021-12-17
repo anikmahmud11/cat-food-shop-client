@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import Rating from 'react-rating';
 
 const Review = () => {
     const [userReviews, setUserReviews] = useState([])
     useEffect(() => {
-        fetch('/review.json')
+        fetch('http://localhost:5000/review')
             .then(res => res.json())
             .then(data => setUserReviews(data))
     }, [])
@@ -17,9 +18,15 @@ const Review = () => {
                    key={review.key}
                    className='customcard shadow'
                    >    
-                       <h5 style={{textAlign:"start"}}>{review?.name}</h5>
-                       <p style={{textAlign:"start"}}>{review?.details}</p>
-                       <p style={{textAlign:"start"}}>{review?.rate}</p>
+                       <h5 style={{textAlign:"start"}}>{review?.email}</h5>
+                       <p style={{ textAlign: "start",color:"rgba(255, 127, 80, 0.89)" }}>
+                            <small ><Rating
+                                initialRating={review?.rating}
+                                emptySymbol="far fa-star"
+                                fullSymbol="fas fa-star"
+                                readonly></Rating></small>
+                        </p>
+                       <p style={{textAlign:"start"}}>{review?.description}</p>
                        
                    </div>)
                }
