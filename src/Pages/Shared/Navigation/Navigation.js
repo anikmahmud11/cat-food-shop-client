@@ -20,8 +20,8 @@ const Navigation = () => {
           {user?.email && <Nav.Link as={Link} to="/review">Give Your feedback</Nav.Link>}
           <NavDropdown title="Admin" id="collasible-nav-dropdown">
             <NavDropdown.Item as={Link} to="/makeadmin">Make Admin</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/manageorder">Manage All Orders</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/addproduct">Add New Product</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
           </NavDropdown>

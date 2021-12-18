@@ -50,15 +50,15 @@ console.log(result);
                 <p>Price : ${singleService?.price}</p>
             </div>
             <div>
-                <form className="placeOrder-form container  m-0 border border-success rounded  " onSubmit={handleSubmit(onSubmit)}>
+                <form className="placeOrder-form container  m-0 " onSubmit={handleSubmit(onSubmit)}>
 
-                    <input readOnly className="container-fluid" defaultValue={user?.email}  {...register("email",)} />
+                    <input readOnly className="container-fluid shipping-input" defaultValue={user?.email}  {...register("email",)} />
                     {errors.email && <span className="error">This field is required</span>}
-                    <input className="container-fluid" placeholder="Address" defaultValue="" {...register("address")} required />
-                    <input className="container-fluid" placeholder="City" defaultValue="" {...register("city")} required />
-                    <input className="container-fluid" placeholder="phone number" defaultValue="" {...register("phone")} required />
+                    <input className="container-fluid shipping-input" placeholder="Address" defaultValue="" {...register("address")} required />
+                    <input className="container-fluid shipping-input" placeholder="City" defaultValue="" {...register("city")} required />
+                    <input className="container-fluid shipping-input" placeholder="phone number" defaultValue="" {...register("phone")} required />
 
-                    <input className="container-fluid bg-success text-white mb-2" type="submit" />
+                    <input className="container-fluid shipping-input bg-success text-white mb-2" type="submit" />
                 </form>
             </div>
 

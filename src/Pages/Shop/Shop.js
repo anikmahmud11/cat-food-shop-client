@@ -24,8 +24,8 @@ const Shop = () => {
                    key={product.key}
                    className='customcard shadow'
                    >    <img style={{height:"200px"}} className='w-50%' src={product?.image} alt="" />
-                       <h5 style={{textAlign:"start"}}>{product?.name.slice(0,30)}...</h5>
-                       <p style={{textAlign:"start"}}>{product?.description.slice(0,50)}...</p>
+                       <h5 style={{textAlign:"start"}}>{product?.name?.slice(0,30)}...</h5>
+                       <p style={{textAlign:"start"}}>{product?.description?.slice(0,50)}...</p>
                        <p style={{ textAlign: "start",color:"rgba(255, 127, 80, 0.89)" }}>
                             <small ><Rating
                                 initialRating={product?.rating}

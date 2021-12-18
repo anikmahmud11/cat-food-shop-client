@@ -10,11 +10,14 @@ const useFirebase = () => {
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
     const signInUsingGoogle = () => {
+        
        return signInWithPopup(auth, googleProvider)
-           
+     
+        
             .catch(error=>{
                 setError(error.message)
             })
+            
     }
 
     const logout =()=>{
@@ -28,14 +31,18 @@ const useFirebase = () => {
         onAuthStateChanged(auth, user=>{
             if (user){
                 console.log('state change',user); 
-                setUser(user) ;              
+                const { email , displayName:name}= user;
+                setUser(user) ;
+                saveUser(email,name,'POST');
+               
+                           
             }
         })
     },[])
-    const saveUser =(email,displayName) =>{
+    const saveUser =(email,displayName,method) =>{
         const user={email, displayName};
         fetch('http://localhost:5000/users',{
-            method:'POST',
+            method:method,
             headers:{
                 'content-type' : 'application/json'
             },
@@ -43,10 +50,12 @@ const useFirebase = () => {
         })
         .then()
     }
+    
     return{
         user,
         error,
         logout,
+       
         signInUsingGoogle
     }
 }
