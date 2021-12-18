@@ -4,5 +4,8 @@
     width: 50%;
 }
 .logout{
-    
+    cursor: pointer;
+}
+.logintext{
+    text-decoration: none;
 }

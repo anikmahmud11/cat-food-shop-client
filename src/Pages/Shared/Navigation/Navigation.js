@@ -18,19 +18,19 @@ const Navigation = () => {
           <Nav.Link as={Link} to="/shop">Shop</Nav.Link>
           {user?.email && <Nav.Link as={Link} to="/myorder">My Order</Nav.Link>}
           {user?.email && <Nav.Link as={Link} to="/review">Give Your feedback</Nav.Link>}
-          <NavDropdown title="Admin" id="collasible-nav-dropdown">
+          {user?.email &&<NavDropdown title="Admin" id="collasible-nav-dropdown">
             <NavDropdown.Item as={Link} to="/makeadmin">Make Admin</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/manageorder">Manage All Orders</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/addproduct">Add New Product</NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-          </NavDropdown>
+            <NavDropdown.Item href="/makeadmin">Make Admin</NavDropdown.Item>
+          </NavDropdown>}
         </Nav>
         <Nav >
-          <Link to="/login">
-            <p className="p-3">Login</p>
+          <Link to="/login" style={{textDecoration:"none",color:"black"}}>
+            <p  className="p-3">Login</p>
           </Link>
-          {user?.email && <p onClick={logout} className="p-3 ">Logout</p>
+          {user?.email && <p onClick={logout} className="p-3 logout">Logout</p>
           }            <p className="p-3">Login As: {user?.displayName}</p>
           <div ><img className='nav-img' src={user?.photoURL} alt="" /></div>
         </Nav>

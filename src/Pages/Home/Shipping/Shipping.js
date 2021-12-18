@@ -10,7 +10,7 @@ const Shipping = () => {
     const [singleService, setSingleService] = useState({})
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://intense-earth-59600.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setServiceDetails(data))
     }, [])
@@ -24,7 +24,7 @@ const Shipping = () => {
    const onSubmit = data => {
     const service = singleService;
     data.orders= service;
-       fetch('http://localhost:5000/orders',{
+       fetch('https://intense-earth-59600.herokuapp.com/orders',{
         method: 'POST',
       headers: {
         'content-type': 'application/json'

@@ -3,14 +3,14 @@ import React, { useEffect, useState } from 'react';
 const ManageOrder = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://intense-earth-59600.herokuapp.com/orders')
             .then(res => res.json())
             .then(data =>setOrders(data));
     }, [])
 
     // delete 
     const handleDeleteOrder = id => {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://intense-earth-59600.herokuapp.com/orders/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

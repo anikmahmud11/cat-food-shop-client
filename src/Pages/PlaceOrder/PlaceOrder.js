@@ -9,7 +9,7 @@ const PlaceOrder = () => {
     const [singleService, setSingleService] = useState({})
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://intense-earth-59600.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setServiceDetails(data))
     }, [])

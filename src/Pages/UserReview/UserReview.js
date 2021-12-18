@@ -9,7 +9,7 @@ const UserReview = () => {
     const [singleService, setSingleService] = useState({})
   const{user}=useAuth();
     useEffect(()=>{
-     fetch('http://localhost:5000/products')
+     fetch('https://intense-earth-59600.herokuapp.com/products')
      .then(res=>res.json())
      .then(data=>setServiceDetails(data))
     },[])
@@ -23,7 +23,7 @@ const UserReview = () => {
     const onSubmit = data => {
      const service = singleService;
      data.orders= service;
-        fetch('http://localhost:5000/review',{
+        fetch('https://intense-earth-59600.herokuapp.com/review',{
          method: 'POST',
        headers: {
          'content-type': 'application/json'

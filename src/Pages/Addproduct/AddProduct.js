@@ -6,7 +6,7 @@ const AddProduct = () => {
 
     const onSubmit = data => {
         
-        fetch('http://localhost:5000/products', {
+        fetch('https://intense-earth-59600.herokuapp.com/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -7,7 +7,7 @@ const MyOrder = () => {
     const { user } = useAuth();
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://intense-earth-59600.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => {
                 const emails = data.filter(data => data.email === user.email)
@@ -18,7 +18,7 @@ const MyOrder = () => {
 
     // delete 
     const handleDeleteOrder = id => {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://intense-earth-59600.herokuapp.com/orders/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
