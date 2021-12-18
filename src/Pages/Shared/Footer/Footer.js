@@ -8,10 +8,10 @@ const Footer = () => {
       <MDBContainer className='p-4'>
         <MDBRow>
           <MDBCol lg='6' md='12' className='mb-4 mb-md-0'>
-            <h5 className='text-uppercase'>Aged HealthCare</h5>
+            <h5 className='text-uppercase'>Cat food shop</h5>
 
             <p>
-            The Health Resources and Services Administration (HRSA) and the Centers for Medicare and Medicaid Services (CMS) must strategically plan for and support the creation of a robust, qualified workforce across settings through a coordinated interdisciplinary approach that includes scholarships, loan forgiveness, and clinical internships, as well as efforts to train professionals and direct care workers who are already in the workforce.
+            One of the reasons that nutrition is so important for cats is that, as pets go, they live a long time. Currently, our cats are all over ten years old. I fully expect to have the same ten cats in ten years, maybe even fifteen. Barring accidents, all cats should live into their twenties. This means they are going to go through old age and, just like people, need to stay healthy to make the best of their senior years. Proper nutrition plays a huge role in their health.
             </p>
           </MDBCol>
 
@@ -20,16 +20,16 @@ const Footer = () => {
 
             <ul className='list-unstyled'>
               <li>
-              <Nav.Link to ="/home#services" className="text-light">Aged Care and Services</Nav.Link>
+              <Nav.Link to ="/" className="text-light">Cat food and Services</Nav.Link>
               </li>
               <li>
-              <Nav.Link  to="/whyus" className="text-light">Why Us</Nav.Link>
+              <Nav.Link  to="/" className="text-light">Why Us</Nav.Link>
               </li>
               <li>
-              <Nav.Link  to="/news" className="text-light">News</Nav.Link>
+              <Nav.Link  to="/" className="text-light">News</Nav.Link>
               </li>
               <li>
-              <Nav.Link  to="/aboutus" className="text-light">About Us</Nav.Link>
+              <Nav.Link  to="/" className="text-light">About Us</Nav.Link>
               </li>
             </ul>
           </MDBCol>
@@ -38,7 +38,7 @@ const Footer = () => {
 
       <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
         &copy; {new Date().getFullYear()} Copyright:{' '}
-        <Navbar.Brand  to="/home" className="text-light">Aged HealthCare</Navbar.Brand>
+        <Navbar.Brand  to="/home" className="text-light">Cat Food Shop</Navbar.Brand>
       </div>
     </MDBFooter>
     );
